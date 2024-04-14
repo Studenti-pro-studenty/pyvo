@@ -182,8 +182,6 @@ class PyvoApp:
                     self.tui.print_votes_by_weight(votes_by_weight)
 
                     input()
-                elif user_input[0] == "rpreset":
-                    self.load_preset(self.preset)
 
                 elif user_input[0] == "rmlast":
                     last_record = Vote.select().order_by(Vote.id.desc()).first()
