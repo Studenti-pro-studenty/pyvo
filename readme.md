@@ -1,6 +1,8 @@
 # PYVO - PYthon VOting system
 Univerzální hlasovací systém
 
+![pyvo](https://github.com/Studenti-pro-studenty/pyvo/assets/44552607/b28c5cf5-64c8-4c74-9060-ea8de9676656)
+
 ## Adresář presets
 Obsahuje přednastavené profily, podle kterých se vytváří tabulky v databázi.
 
