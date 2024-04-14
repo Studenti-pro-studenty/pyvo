@@ -9,7 +9,7 @@ Soubor SQLite databáze, pro načtení jiného presetu je potřeba ho přesunout
 
 ## Instalace závislostí
 ```commandline
-cd ~/pyvo/src
+cd pyvo/src
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -17,6 +17,6 @@ pip install -r requirements.txt
 
 ## Spuštění
 ```commandline
-cd ~/pyvo/src
+cd pyvo/src
 python main.py
 ```
