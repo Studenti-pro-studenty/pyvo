@@ -74,6 +74,7 @@ class PyvoApp:
                 'title': toml.load("{dir}/{file}".format(dir=PRESETS_DIR, file=preset_file))["title"]
             } for index, preset_file in enumerate(os.listdir(PRESETS_DIR))]
 
+            self.tui.clear_console()
             self.tui.list_presets(presets)
             selected_preset_index = int(input().split(' ')[0]) - 1
 
