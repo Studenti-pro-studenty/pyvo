@@ -207,9 +207,13 @@ class PyvoApp:
                     if len(title) > 0:
                         self.load_preset("{dir}/{file}".format(dir=PRESETS_DIR, file=file[0].value))
 
-            self.tui.clear_console()
+                else:
+                    self.tui.status = {
+                        'message': "Invalid command",
+                        'success': False
+                    }
 
-        exit(0)
+            self.tui.clear_console()
 
 
 if __name__ == '__main__':
