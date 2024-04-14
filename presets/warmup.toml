@@ -1,0 +1,37 @@
+title = "WarmUp 2024"
+
+[[weights]]
+name = "Ostatní"
+weight = 1
+
+[[weights]]
+name = "VUT"
+weight = 2
+
+[[weights]]
+name = "FEKT"
+weight = 3
+
+[[options]]
+name = "Scorched Æarth"
+
+[[options]]
+name = "Black Spring"
+
+[[options]]
+name = "Slaves of Passion"
+
+[[options]]
+name = "July Morning"
+
+[[options]]
+name = "Levaross"
+
+[[options]]
+name = "ZBYNEK"
+
+[[options]]
+name = "momentary francis"
+
+[[options]]
+name = "Vinc & Red Light Street"
