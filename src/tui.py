@@ -1,3 +1,4 @@
+import os
 from rich.console import Console
 from rich.table import Table, Column
 
@@ -8,7 +9,7 @@ class Tui:
         self.status = None
 
     def clear_console(self):
-        self.console.clear()
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     def print_title(self, title):
         self.console.print("{title}\n".format(title=title))
