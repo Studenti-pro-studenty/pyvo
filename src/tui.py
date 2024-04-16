@@ -79,7 +79,7 @@ class Tui:
     def print_votes_by_weight(self, results):
         table = Table(
             Column(header="Name", justify="center"),
-            Column(header="Weight", justify="left"),
+            Column(header="Weight", justify="center"),
             Column(header="Votes", justify="center"),
             title="Votes by weight"
         )
