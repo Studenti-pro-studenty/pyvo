@@ -49,7 +49,7 @@ class Tui:
 
         self.console.print("")
 
-    def list_weights(self, weights):
+    def list_counts(self, weights):
         self.console.print("[blue bold underline]Weights")
 
         for weight in weights:

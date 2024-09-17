@@ -26,19 +26,10 @@ class Option(BaseModel):
         db_table = 'options'
 
 
-class Weight(BaseModel):
-    id = PrimaryKeyField()
-    name = TextField()
-    weight = DecimalField(default=1)
-
-    class Meta:
-        db_table = 'weights'
-
-
 class Vote(BaseModel):
     id = PrimaryKeyField()
     option_id = ForeignKeyField(Option, backref='votes')
-    weight_id = ForeignKeyField(Weight, backref='votes')
+    count = DecimalField(default=0)
     datetime = DateTimeField(default=datetime.datetime.now)
 
     class Meta:

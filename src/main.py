@@ -3,7 +3,7 @@ import os
 import re
 from peewee import *
 
-from models import DATABASE_PATH, DATABASE, Info, Option, Weight, Vote
+from models import DATABASE_PATH, DATABASE, Info, Option, Group, Vote
 from tui import Tui
 
 CONFIG_PATH = './../presets/warmup.toml'
@@ -46,7 +46,7 @@ class PyvoApp:
                 preserve=[Option.name]
             ).execute()
 
-    def sync_weights(self):
+    def sync_vote_counts(self):
         for index, weight in enumerate(self.preset["weights"]):
             self.last_inserted_row = Weight.insert(
                 id=index + 1,
@@ -94,7 +94,7 @@ class PyvoApp:
                 self.tui.print_title(title[0].value)
 
             self.tui.list_options(Option.select(Option.id, Option.name))
-            self.tui.list_weights(Weight.select(Weight.id, Weight.name))
+            self.tui.list_counts(Weight.select(Weight.id, Weight.name))
             self.tui.print_status_message()
 
             self.tui.list_menu_options([
@@ -112,7 +112,7 @@ class PyvoApp:
                 if len(user_input) in (1, 2):
                     option, weight = None, None
                     if len(user_input) == 1:
-                        self.tui.list_weights(Weight.select(Weight.id, Weight.name))
+                        self.tui.list_counts(Group.select(Group.id, Group.name))
                         self.tui.console.print("Insert weight", end=': ')
                         user_input.append(input())
 
